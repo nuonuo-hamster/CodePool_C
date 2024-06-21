@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 建置使用中檔案",
+            "command": "D:\\mingw64_8.1.0-posix\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                // "${file}",
+                "*.c",
+                "-o",
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\run.exe",
+                "-fexec-charset=utf-8" //加這行 GBK,utf-8,big5
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "偵錯工具產生的工作。"
+        }
+    ],
+    "version": "2.0.0"
+}
